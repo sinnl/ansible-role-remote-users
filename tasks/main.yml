@@ -1,5 +1,5 @@
 ---
-# tasks file for ansible_remote_users
+# tasks file for ansible-role-remote_users
 
 - name: Create Automation Users
   user:
