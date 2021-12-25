@@ -1,5 +1,5 @@
 ---
-# vars file for ansible-role-remote_users
+# vars file for ansible-role-remote-users
 automation_users:
   opsadm:
     pass_hash: '$6$COMwE9Mj5aiRj8Dj$pThfDcrPo0L3NGzn./d5/j3PEKc.e5prrvIGnCGqOScXWgOzPv8XxFt9A7lK2oFeNB8V7zj9/79yOxcMCXPZA.'

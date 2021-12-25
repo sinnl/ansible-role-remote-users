@@ -7,7 +7,7 @@
   "deleteLocal": false,
   "hostname": "10.11.0.122",
   "port": "22",
-  "target": "/export/home/opsadm/GIT/ansible-role-remote_users",
+  "target": "/export/home/opsadm/GIT/ansible-role-remote-users",
   "ignore": [
     ".remote-sync.json",
     ".git/**"
