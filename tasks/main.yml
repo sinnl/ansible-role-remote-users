@@ -1,0 +1,31 @@
+---
+# tasks file for ansible_remote_users
+
+- name: Create Automation Users
+  user:
+    name: "{{ item.key }}"
+    create_home: true
+    uid: "{{ item.value.uid }}"
+    home: "{{ item.value.home }}"
+    password: "{{ item.value.pass_hash }}"
+    comment: "{{ item.value.comment }}"
+    expires: -1
+  with_items: "{{ lookup('dict', automation_users) }}"
+
+- name: Add SSH Key for Automation User
+  authorized_key:
+    user: "{{ item.key }}"
+    state: present
+    manage_dir: true
+    key: "{{ lookup('file', item.value.pub_key) }}"
+  with_items: "{{ lookup('dict', automation_users) }}"
+
+- name: Add Automation User to Sudoers
+  copy:
+    mode: 0644
+    dest: "{{ item.value.sudoers_file }}"
+    content: "{{ item.key }}  ALL=(ALL) NOPASSWD: ALL"
+    validate: /usr/sbin/visudo -cf %s
+  with_items: "{{ lookup('dict', automation_users) }}"
+
+...

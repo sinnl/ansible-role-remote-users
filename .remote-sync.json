@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "10.11.0.122",
+  "port": "22",
+  "target": "/export/home/opsadm/GIT/ansible_remote_users",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "opsadm",
+  "keyfile": "/Users/ldurlak/.ssh/opsadm_rsa",
+  "watch": [],
+  "transport": "scp"
+}
