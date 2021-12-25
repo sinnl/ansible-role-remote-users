@@ -1,4 +1,4 @@
-remote_users
+remote-users
 =========
 
 Creates and configures remote users with full sudo option.
