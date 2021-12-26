@@ -1,20 +1,18 @@
 ---
 # vars file for ansible-role-remote-users
 automation_users:
-  opsadm:
-    pass_hash: '$6$COMwE9Mj5aiRj8Dj$pThfDcrPo0L3NGzn./d5/j3PEKc.e5prrvIGnCGqOScXWgOzPv8XxFt9A7lK2oFeNB8V7zj9/79yOxcMCXPZA.'
-    name: 'opsadm'
-    uid: '11666'
-    home: '/export/home/opsadm'
-    comment: 'Ansible Automation User'
-    sudoers_file: '/etc/sudoers.d/opsadm'
-    pub_key: 'opsadm_rsa.pub'
-  test_user:
-    pass_hash: '$6$COMwE9Mj5aiRj8Dj$pThfDcrPo0L3NGzn./d5/j3PEKc.e5prrvIGnCGqOScXWgOzPv8XxFt9A7lK2oFeNB8V7zj9/79yOxcMCXPZA.'
-    name: 'test_user'
-    uid: '11667'
-    home: '/export/home/test_user'
-    comment: 'Ansible Test User'
-    sudoers_file: '/etc/sudoers.d/test_user'
-    pub_key: 'test_rsa.pub'
+  XXXXXXX:         # username to create
+    pass_hash: ''     # password hash
+    uid: ''           # UID
+    home: ''          # home directory path
+    comment: ''       # GECOS
+    sudoers_file: ''  # path to suders file e. g. /etc/sudoers.d/username
+    pub_key: ''       # name of the public key template file in files folder
+  YYYYYYYY:         # username to create
+    pass_hash: ''     # password hash
+    uid: ''           # UID
+    home: ''          # home directory path
+    comment: ''       # GECOS
+    sudoers_file: ''  # path to suders file e. g. /etc/sudoers.d/username
+    pub_key: ''
 ...
