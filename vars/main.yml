@@ -1,18 +1,3 @@
 ---
 # vars file for ansible-role-remote-users
-automation_users:
-  XXXXXXX:         # username to create
-    pass_hash: ''     # password hash
-    uid: ''           # UID
-    home: ''          # home directory path
-    comment: ''       # GECOS
-    sudoers_file: ''  # path to suders file e. g. /etc/sudoers.d/username
-    pub_key: ''       # name of the public key template file in files folder
-  YYYYYYYY:         # username to create
-    pass_hash: ''     # password hash
-    uid: ''           # UID
-    home: ''          # home directory path
-    comment: ''       # GECOS
-    sudoers_file: ''  # path to suders file e. g. /etc/sudoers.d/username
-    pub_key: ''
 ...
