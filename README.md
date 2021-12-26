@@ -7,6 +7,7 @@ Role's Variables
 -----------------
 - Automation User's Dictionary
 
+  ```
   automation_users:
     XXXXXXX:            # username to create
       pass_hash: ''     # password hash
@@ -22,10 +23,11 @@ Role's Variables
       comment: ''       # GECOS
       sudoers_file: ''  # path to suders file e. g. /etc/sudoers.d/username
       pub_key: ''       # name of the pub key.
+  ```
 
 - public key files:
   - need to be present in $HOME/ssh_public_keys directory
-  - named same as pub_key value from Automation User's dictionary. 
+  - named same as pub_key value from Automation User's dictionary.
 
 Example Playbook
 ----------------
