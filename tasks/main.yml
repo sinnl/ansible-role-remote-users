@@ -17,7 +17,7 @@
     user: "{{ item.key }}"
     state: present
     manage_dir: true
-    key: "{{ lookup('file', item.value.pub_key) }}"
+    key: "{{ lookup('file', lookup('env','HOME') + 'ssh_public_keys/' + item.value.pub_key) }}"
   with_items: "{{ lookup('dict', automation_users) }}"
 
 - name: Add Automation User to Sudoers
