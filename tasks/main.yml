@@ -9,7 +9,7 @@
     home: "{{ item.value.home }}"
     password: "{{ item.value.pass_hash }}"
     comment: "{{ item.value.comment }}"
-    expires: -1
+    expires: '-1'
   with_items: "{{ lookup('dict', automation_users) }}"
 
 - name: Add SSH Key for Automation User
