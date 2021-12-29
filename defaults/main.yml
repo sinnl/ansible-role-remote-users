@@ -1,10 +1,2 @@
 ---
 # defaults file for ansible-role-remote-users
-automation_users:
-  opsadm:
-    "comment": "Ansible Automation User"
-    "home": "/export/home/opsadm"
-    "pass_hash": "$6$COMwE9Mj5aiRj8Dj$pThfDcrPo0L3NGzn./d5/j3PEKc.e5prrvIGnCGqOScXWgOzPv8XxFt9A7lK2oFeNB8V7zj9/79yOxcMCXPZA."
-    "pub_key": "opsadm_rsa.pub"
-    "sudoers_file": "/etc/sudoers.d/opsadm"
-    "uid": "11666"
