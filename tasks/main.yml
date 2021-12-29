@@ -10,7 +10,7 @@
     password: "{{ item.value.pass_hash }}"
     comment: "{{ item.value.comment }}"
     expires: '-1'
-  with_items: "{{ lookup('dict', automation_users) }}"
+  with_dict: "{{ automation_users }}"
 
 - name: Add SSH Key for Automation User
   authorized_key:
@@ -18,7 +18,7 @@
     state: present
     manage_dir: true
     key: "{{ lookup('file', '../files/' + item.value.pub_key) }}"
-  with_items: "{{ lookup('dict', automation_users) }}"
+  with_dict: "{{ automation_users }}"
 
 - name: Add Automation User to Sudoers
   copy:
@@ -26,6 +26,6 @@
     dest: "{{ item.value.sudoers_file }}"
     content: "{{ item.key }}  ALL=(ALL) NOPASSWD: ALL"
     validate: /usr/sbin/visudo -cf %s
-  with_items: "{{ lookup('dict', automation_users) }}"
+  with_dict: "{{ automation_users }}"
 
 ...
