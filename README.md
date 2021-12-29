@@ -26,8 +26,8 @@ Role's Variables
   ```
 
 - public key files:
-  - need to be present in $HOME/ssh_public_keys directory
-  - named same as pub_key value from Automation User's dictionary.
+  - need to be present in files folder of the playbook
+  - nned to be named same as pub_key value from Automation User's dictionary.
 
 Example Playbook
 ----------------
